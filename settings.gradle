@@ -1,0 +1,2 @@
+rootProject.name = "AndroidPokedex-B75934"
+include ':app'
