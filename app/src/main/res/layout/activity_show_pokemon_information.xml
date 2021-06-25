@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowPokemonInformationActivity">
+
+    <ImageView
+        android:id="@+id/specificPokemonImage"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars"
+        android:background="@color/maincolor" />
+
+    <TextView
+        android:id="@+id/specificPokemonIdLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pokemonId"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/specificPokemonNameLabel"
+        app:layout_constraintEnd_toStartOf="@+id/specificPokemonId"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/specificPokemonImage"
+        android:background="@color/secundary"/>
+
+    <TextView
+        android:id="@+id/specificPokemonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/specificPokemonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/specificPokemonIdLabel"
+        app:layout_constraintTop_toBottomOf="@+id/specificPokemonImage"
+        tools:text="@string/pokemonId" />
+
+    <TextView
+        android:id="@+id/specificPokemonNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:background="@color/secundary"
+        app:layout_constraintBottom_toTopOf="@+id/specificPokemonHeightLabel"
+        app:layout_constraintEnd_toEndOf="@+id/specificPokemonIdLabel"
+        app:layout_constraintStart_toStartOf="@+id/specificPokemonIdLabel"
+        app:layout_constraintTop_toBottomOf="@+id/specificPokemonIdLabel" />
+
+    <TextView
+        android:id="@+id/specificPokemonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/specificPokemonHeight"
+        app:layout_constraintEnd_toEndOf="@+id/specificPokemonId"
+        app:layout_constraintStart_toStartOf="@+id/specificPokemonId"
+        app:layout_constraintTop_toBottomOf="@+id/specificPokemonId"
+        tools:text="@string/name" />
+
+    <TextView
+        android:id="@+id/specificPokemonHeightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/altura"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:background="@color/secundary"
+        app:layout_constraintBottom_toTopOf="@+id/specificPokemonWeightLabel"
+        app:layout_constraintEnd_toEndOf="@+id/specificPokemonNameLabel"
+        app:layout_constraintStart_toStartOf="@+id/specificPokemonNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/specificPokemonNameLabel" />
+
+    <TextView
+        android:id="@+id/specificPokemonHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/specificPokemonWeight"
+        app:layout_constraintEnd_toEndOf="@+id/specificPokemonName"
+        app:layout_constraintStart_toStartOf="@+id/specificPokemonName"
+        app:layout_constraintTop_toBottomOf="@+id/specificPokemonName"
+        tools:text="@string/altura" />
+
+    <TextView
+        android:id="@+id/specificPokemonWeightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/peso"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:background="@color/secundary"
+        app:layout_constraintBottom_toTopOf="@+id/specificPokemonBaseExperienceLabel"
+        app:layout_constraintEnd_toEndOf="@+id/specificPokemonHeightLabel"
+        app:layout_constraintStart_toStartOf="@+id/specificPokemonHeightLabel"
+        app:layout_constraintTop_toBottomOf="@+id/specificPokemonHeightLabel" />
+
+    <TextView
+        android:id="@+id/specificPokemonWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/specificPokemonBaseExperience"
+        app:layout_constraintEnd_toEndOf="@+id/specificPokemonHeight"
+        app:layout_constraintStart_toStartOf="@+id/specificPokemonHeight"
+        app:layout_constraintTop_toBottomOf="@+id/specificPokemonHeight"
+        tools:text="@string/peso" />
+
+    <TextView
+        android:id="@+id/specificPokemonBaseExperienceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/experiencia_base"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:background="@color/secundary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/specificPokemonWeightLabel"
+        app:layout_constraintStart_toStartOf="@+id/specificPokemonWeightLabel"
+        app:layout_constraintTop_toBottomOf="@+id/specificPokemonWeightLabel" />
+
+    <TextView
+        android:id="@+id/specificPokemonBaseExperience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/specificPokemonWeight"
+        app:layout_constraintStart_toStartOf="@+id/specificPokemonWeight"
+        app:layout_constraintTop_toBottomOf="@+id/specificPokemonWeight"
+        tools:text="@string/experiencia_base" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

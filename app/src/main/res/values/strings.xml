@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AndroidPokedex-B75934</string>
+    <string name="experiencia_base">Exp Base</string>
+    <string name="peso">Peso</string>
+    <string name="altura">Altura</string>
+    <string name="name">Nombre</string>
+    <string name="pokemonId">Id</string>
 </resources>

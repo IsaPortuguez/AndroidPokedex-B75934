@@ -1,4 +1,4 @@
-package cr.ac.ucr.androidpokedex_b75934;
+package cr.ac.ucr.androidpokedex_b75934.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -14,9 +14,10 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import java.util.ArrayList;
 
+import cr.ac.ucr.androidpokedex_b75934.R;
 import cr.ac.ucr.androidpokedex_b75934.models.Pokemon;
 
-public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.ViewHolder>{
+public class PokemonListAdapter extends RecyclerView.Adapter<ViewHolderPokemon>{
 
     private ArrayList<Pokemon> dataset;
     private Context context;
@@ -29,18 +30,20 @@ public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolderPokemon onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.pokemon_item,parent,false);
-        return new ViewHolder(view);
+        return new ViewHolderPokemon(view);
 
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolderPokemon holder, int position) {
 
         Pokemon p = dataset.get(position);
         holder.nameTextView.setText(p.getName());
+
+        holder.setOnClickListener(p.getNumber());
 
         Glide.with(context)
                 .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + p.getNumber() + ".png")
@@ -64,17 +67,5 @@ public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.
 
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-
-        private ImageView photoImageView;
-        private TextView nameTextView;
-
-        public ViewHolder(View itemView) {
-            super(itemView);
-
-            photoImageView = (ImageView) itemView.findViewById(R.id.photoImageView);
-            nameTextView = (TextView) itemView.findViewById(R.id.nameTextView);
-        }
-    }
 
 }

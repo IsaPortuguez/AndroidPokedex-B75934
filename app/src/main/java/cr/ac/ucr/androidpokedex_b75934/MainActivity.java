@@ -1,7 +1,6 @@
 package cr.ac.ucr.androidpokedex_b75934;
 
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,11 +8,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.util.Log;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
-import java.util.List;
 
+import cr.ac.ucr.androidpokedex_b75934.adapter.PokemonListAdapter;
 import cr.ac.ucr.androidpokedex_b75934.apipokedex.ApiPokedexServices;
 import cr.ac.ucr.androidpokedex_b75934.models.PokedexAnswer;
 import cr.ac.ucr.androidpokedex_b75934.models.Pokemon;
@@ -21,7 +18,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -70,10 +66,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        retrofit = new Retrofit.Builder()
-                .baseUrl("https://pokeapi.co/api/v2/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+        retrofit = Singleton.getRetrofit();
 
         suitableForCharging = true;
         offset = 0;
